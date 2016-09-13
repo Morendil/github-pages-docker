@@ -36,6 +36,7 @@ RUN /bin/bash -l -c 'rvm use $(cat /tmp/.ruby-version)@global --default'
 # Install app dependencies
 RUN /bin/bash -l -c 'gem install --no-document \
   github-pages:$(cat /tmp/.gh-pages-version) \
+  bundler \
   jekyll-github-metadata'
 
 # Run the app
