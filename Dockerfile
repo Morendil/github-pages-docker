@@ -40,4 +40,4 @@ RUN /bin/bash -l -c 'gem install --no-document \
   jekyll-github-metadata'
 
 # Run the app
-CMD /bin/bash -l -c 'jekyll serve --watch --force_polling -H 0.0.0.0 -P 4000'
+CMD /bin/bash -l -c 'bundle install && bundle exec jekyll serve --safe --port $PORT --no-watch --host 0.0.0.0'
